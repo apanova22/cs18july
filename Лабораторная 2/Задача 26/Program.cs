@@ -26,7 +26,7 @@ namespace Задача_26
             
             double distance;
             distance = initialVelocity * time +((acceleration * Math.Pow(time,2))/2);
-            Console.WriteLine("{0:F4}", distance);
+            Console.WriteLine("{0:F2}", distance);
         }
     }
 }

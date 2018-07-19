@@ -10,8 +10,22 @@ namespace Задача_3
     {
         static void Main(string[] args)
         {
-            
 
+            
+            double k = double.Parse(Console.ReadLine());
+            double a;
+            if (k > 0)
+            {
+                a=Math.Sqrt(k);
+                Console.WriteLine(a);
+                
+            }
+            else
+            {
+                a = k * k;
+                Console.WriteLine(a);
+            }
+            
         }
     }
 }

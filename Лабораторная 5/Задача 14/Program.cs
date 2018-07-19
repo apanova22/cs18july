@@ -27,9 +27,28 @@ namespace Задача_14
                         Console.WriteLine("Пересекаются");
                     }
                     if (leftB > rightB)
-                    { Console.WriteLine("Пересекаются"); }
+                    {
+                        Console.WriteLine("Пересекаются");
+                    }
+                    return;
                 }
 
+                if (leftA > rightA)
+                {
+                    if (rightB < leftA)
+                    {
+                        Console.WriteLine("Не пересекаются");
+                    }
+                    if (rightB > leftA && rightB>leftB)
+                    {
+                        Console.WriteLine("Пересекаются");
+                    }
+                    if (rightB > leftA && rightB < leftB)
+                    {
+                        Console.WriteLine("Пересекаются");
+                    }
+                            
+                }
             }
             else
             {
