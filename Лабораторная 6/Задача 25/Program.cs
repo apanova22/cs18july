@@ -23,6 +23,7 @@ namespace Задача_25
                 if (b>=20)
                 {
                     Console.WriteLine("");
+                    b = 0;
                     
                 }
                 Console.Write("#");
