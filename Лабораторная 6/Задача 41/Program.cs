@@ -42,7 +42,7 @@ namespace Задача_41
             {
                 while (P <= Q)
                 {
-                    if (i < a / 2)
+                    if (i <= a / 2)
                     {
                         Console.Write(P + "<");
                         i++;
