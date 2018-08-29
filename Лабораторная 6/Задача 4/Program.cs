@@ -10,8 +10,8 @@ namespace Задача_4
     {
         static void Main(string[] args)
         {
-            double A = double.Parse(Console.ReadLine());
-            double B = double.Parse(Console.ReadLine());
+            int A = int.Parse(Console.ReadLine());
+            int B = int.Parse(Console.ReadLine());
             if (A > B)
             {
                 Console.WriteLine("Значение A должно быть не больше значения B");

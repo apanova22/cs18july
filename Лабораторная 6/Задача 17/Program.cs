@@ -10,16 +10,16 @@ namespace Задача_17
     {
         static void Main(string[] args)
         {
-            double n = double.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine());
             if (n <= 0)
             {
                 Console.WriteLine("Значение N должно быть положительным");
                 return;
             }
 
-            double s = 0;
-            double a = 1;
-            double b;
+            int s = 0;
+            int a = 1;
+            int b;
             while(a<=n)
             {
                 

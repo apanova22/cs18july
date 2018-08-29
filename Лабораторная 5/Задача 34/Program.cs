@@ -18,19 +18,54 @@ namespace Задача_34
             double y2 = double.Parse(Console.ReadLine());
             double h2 = double.Parse(Console.ReadLine());
             double w2 = double.Parse(Console.ReadLine());
+            double x3 = x1 + w1;
+            double x4 = x2 + w2;
+            double y3 = y1 + h1;
+            double y4 = y2 + h2;
             if (h1 <= 0 || h2 <= 0)
             {
                 Console.WriteLine("Высота не должна быть отрицательной ");
                 return;
             }
-            if (((y1 + h1) < (y2 + h2) || (y1 + h1) > (y2 + h2) || (x1 + w1) < (x2 + w2) || (x1 + w1) > (x2 + w2)))
+            if (x1 < x3 && x2 < x4)
+            {
+                if (x1 < x2)
                 {
-                Console.WriteLine("Пересекаются");
+                    if (x3 < x2)
+                    {
+                        Console.WriteLine("Не пересекаются");
+                    }
+                    if (x3 > x2 && x3 < x4)
+                    {
+                        Console.WriteLine("Пересекаются({0};{1})", x2, x3);
+                    }
+                    if (x3 > x4)
+                    {
+                        Console.WriteLine("Пересекаются({0};{1})", x2, x4);
+                    }
+                    return;
+                }
 
+                if (x1 >x2)
+                {
+                    if (x4 < x1)
+                    {
+                        Console.WriteLine("Не пересекаются");
+                    }
+                    if (x4 > x1 && x4 > x3)
+                    {
+                        Console.WriteLine("Пересекаются({0};{1})", x1, x3);
+                    }
+                    if (x4 > x1 && x4 < x3)
+                    {
+                        Console.WriteLine("Пересекаются({0};{1})",x1, x4);
+                    }
+
+                }
             }
             else
             {
-                Console.WriteLine("Не пересекаются ");
+                Console.WriteLine("Значение А должно быть меньше В");
             }
         }
     }

@@ -10,7 +10,7 @@ namespace Задача_5
     {
         static void Main(string[] args)
         {
-            double A = double.Parse(Console.ReadLine());
+            int A = int.Parse(Console.ReadLine());
             String B = Console.ReadLine();
             if(A<0)
             { 

@@ -10,22 +10,15 @@ namespace Задача_36
     {
         static void Main(string[] args)
         {
-           //0123456
-//0
-//...
-//|
-//-------
-          //  0123456
-//0...|
-//-------
+
             int w = int.Parse(Console.ReadLine());
             int h = int.Parse(Console.ReadLine());
             int i = 0;
             int n = 0;
-Console.Write(" ");
+            Console.Write(" ");
             while (i < w)
             {
-                
+
                 Console.Write(i);
                 i = i + 1;
             }
@@ -41,17 +34,17 @@ Console.Write(" ");
                     Console.Write(".");
                     i = i + 1;
                 }
-              
+
                 n = n + 1;
-Console.Write("|");
-Console.WriteLine();
+                Console.Write("|");
+                Console.WriteLine();
             }
-            
+
             i = 0;
-Console.Write(" ");
+            Console.Write(" ");
             while (i < w)
             {
-                
+
                 Console.Write("-");
                 i = i + 1;
             }

@@ -10,7 +10,7 @@ namespace Задача_9
     {
         static void Main(string[] args)
         {
-            double V = double.Parse(Console.ReadLine());
+            int V = int.Parse(Console.ReadLine());
             int i = 1;
             while (i <= 9)
             {

@@ -20,22 +20,22 @@ namespace Задача_33
             }
             while (n<9)
             {
-                //1
+                
                     n = n + 1;
 
                 while (i<w)
                 {
-                    //2
+                    
                     i = i + 1;
                     Console.Write(n);
                 }
-                //4
+               
                 i = 0;
                 Console.WriteLine();
                 
 
             }
-            //5
+            
             Console.WriteLine();
         }
     }
