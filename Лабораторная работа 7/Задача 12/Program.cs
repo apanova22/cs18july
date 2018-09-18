@@ -17,7 +17,7 @@ namespace Задача_12
             String[] arr = data.Split(' ');
             String data1 = Console.ReadLine();
 
-            String[] ark = data.Split(' ');
+            String[] ark = data1.Split(' ');
             int[] num = new int[arr.Length];
             int[] num1 = new int[ark.Length];
             while (a < arr.Length)

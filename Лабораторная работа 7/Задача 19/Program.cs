@@ -51,8 +51,8 @@ namespace Задача_19
                 }
                 Console.WriteLine();
                 p++;
-                 
-                
+
+                r++;
                 u = 0;
                 i++;
             }
