@@ -88,5 +88,34 @@ namespace UnitTestProject1
 
 
         }
+       /* [TestMethod]
+        public void Task5662test()
+        {
+           double f = Metods.task5662(1,2,3);
+           double v = Metods.task5662(11,13,19);
+            double j = Metods.task5662(3,17,5);
+            double d = Metods.task5662(1,2,1);
+            double e = Metods.task5662(0,7,13); 
+            Assert.AreEqual("Вещественных корней уравнения 1x ^ 2 + 2x + 3 = 0 нет",f);
+
+        }
+        */
+        [TestMethod]
+        public void Task3669test()
+        {
+            double a = Metods.task3669(8,13);
+            double b = Metods.task3669(13,8);
+            double c = Metods.task3669(159,161);
+            double d = Metods.task3669(648,648);
+            double e = Metods.task3669(-2,600);
+            double h = Metods.task3669(35,24);
+            Assert.AreEqual(1235520, a, 0.001);
+            Assert.AreEqual(1235520, b, 0.001);
+            Assert.AreEqual(4095840, c, 0.001);
+            Assert.AreEqual(648, d, 0.001);
+            Assert.AreEqual(0, e, 0.001);
+            Assert.AreEqual(399703747322880000, h, 0.001);
+        }
+
     }
 }

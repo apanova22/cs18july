@@ -67,6 +67,67 @@ namespace Kode_project
                 i++;
             }
         }
+        public static void task2632(int cx, int cy, int r, String fill)
+        {
+            Console.WriteLine(@"< circle cx = ""{0}"" cy = ""{1}""" + "\n" + @"r=""{2}"" fill=""{3}""/>", cx, cy, r, fill);
+        }
+        public static void task7474(int a, int b, int c)
+        {
+            Console.WriteLine("Квадратное уравнение: {0} * x * x + {1} * x + {2} = 0.", a,b,c);
+            Console.WriteLine("Его дискриминант вычисляется по формуле: d = {0} *{0} - 4 *{1}*{2}",b,a,c); 
+
+        }
+        /*
+            public static String task5662(double a, double b, double c)
+        {
+            if (a == 0)
+            {
+               Console.WriteLine("Данное уравнение не является квадратным");
+              
+            }
+
+            double d = b * b - 4 * a * c;
+            if (d < 0)
+            {
+                Console.WriteLine("Вещественных корней уравнения {0}x^2 + {1}x + {2} = 0 нет", a, b, c);
+
+            }
+            else if (d == 0)
+            {
+                Console.WriteLine("У уравнения {0}x^2 + {1}x + {2} = 0 один корень", a, b, c);
+            }
+            else
+            {
+
+                Console.WriteLine("У уравнения {0}x^2 + {1}x + {2} = 0 два вещественных корня", a, b, c);
+            }
+            return; 
+           
+        }
+        */
+        public static long task3669(int a, int b)
+        {
+            long p = 1;
+            if (a < b)
+            {
+                while (a <= b)
+                {
+                    p = p * a;
+
+                    a = a + 1;
+ }
+            }
+            else
+            {
+                while (b <= a)
+                {
+                    p = p * b;
+
+                    b = b + 1;
+                }
+            }
+            return p;
+        }
 
     }
 }
