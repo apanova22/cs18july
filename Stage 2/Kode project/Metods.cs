@@ -77,34 +77,40 @@ namespace Kode_project
             Console.WriteLine("Его дискриминант вычисляется по формуле: d = {0} *{0} - 4 *{1}*{2}",b,a,c); 
 
         }
-        /*
+       
             public static String task5662(double a, double b, double c)
         {
             if (a == 0)
             {
                Console.WriteLine("Данное уравнение не является квадратным");
-              
+               return "Данное уравнение не является квадратным";
             }
 
             double d = b * b - 4 * a * c;
             if (d < 0)
             {
                 Console.WriteLine("Вещественных корней уравнения {0}x^2 + {1}x + {2} = 0 нет", a, b, c);
-
+                string x = string.Format("Вещественных корней уравнения {0}x^2 + {1}x + {2} = 0 нет", a, b, c);
+                return x;
             }
             else if (d == 0)
             {
                 Console.WriteLine("У уравнения {0}x^2 + {1}x + {2} = 0 один корень", a, b, c);
+                string v = string.Format("У уравнения {0}x^2 + {1}x + {2} = 0 один корень", a, b, c);
+                return v;
             }
             else
             {
 
                 Console.WriteLine("У уравнения {0}x^2 + {1}x + {2} = 0 два вещественных корня", a, b, c);
+                string n = string.Format("У уравнения {0}x^2 + {1}x + {2} = 0 два вещественных корня", a, b, c);
+                return n;
             }
-            return; 
-           
+        
+
+
         }
-        */
+     
         public static long task3669(int a, int b)
         {
             long p = 1;
@@ -127,6 +133,22 @@ namespace Kode_project
                 }
             }
             return p;
+        }
+        public static bool task4847 (int x, int y, int z)
+        {
+            bool result = x == y || y == z || x == z;
+            return result;
+            
+        }
+        public static double task9020(int x)
+        {
+            if (x > 61)
+            {
+                ArgumentException e = new ArgumentException("Подкоренное выражение должно быть неотрицательным");
+                throw e;
+            }
+            double result = 3 * Math.Sqrt(61 - x);
+            return result;
         }
 
     }
