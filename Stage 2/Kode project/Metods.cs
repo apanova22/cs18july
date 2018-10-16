@@ -204,15 +204,16 @@ namespace Kode_project
             discriminant = b * b - 4 * a * c;
             return discriminant;
         }
-        public static string task5170 (int y)
+        public static string task5170(int y)
 
-        {   int a = 1;
+        {
+            int a = 1;
             int count = 0;
             if (y < 0)
             {
                 ArgumentException e = new ArgumentException("Значение Y должно быть положительным");
                 throw e;
-               
+
             }
             while (a <= y)
             {
@@ -230,14 +231,42 @@ namespace Kode_project
             }
             if (count == 2)
             {
-                
+
                 return "число простое";
             }
             else
             {
-                
+
                 return "число не простое";
             }
         }
+            public static double[] task6497(int[] num)
+            {
+                
+                int a = 0;
+                int i = 0;
+                double sum = 0;
+            
+                while (i < num.Length)
+                {
+
+                    sum = sum + num[i];
+
+                    i++;
+
+                }
+                i = 0;
+                double sr = sum / num.Length;
+            double[] r=new double [num.Length];
+                while (i < num.Length)
+                {
+
+                   r[i]=Math.Abs(sr - num[a]);
+                    i++;
+                    a++;
+                }
+            return r;
+            }
+        }
     }
-}
+

@@ -60,6 +60,10 @@
       <Project>{cb1e8336-9469-4bc5-8c61-14d9269548ed}</Project>
       <Name>Kode project</Name>
     </ProjectReference>
+    <ProjectReference Include="..\task1212\task1212.csproj">
+      <Project>{604b9a87-2378-48bc-827e-a0dde8b8ed84}</Project>
+      <Name>task1212</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

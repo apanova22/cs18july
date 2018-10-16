@@ -7,30 +7,39 @@ using System.Threading.Tasks;
 
 namespace task1212
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             String n = Console.ReadLine();
             String filename = "task1212/test" + n + ".csv";
-            StreamReader streamReader = new StreamReader(filename);
-            String max = streamReader.ReadLine();
+
 
             try
             {
-                int m = int.Parse(max);
-                if (!streamReader.EndOfStream)
+                StreamReader streamReader = new StreamReader(filename);
+                String line;
+                line = streamReader.ReadLine();
+                int[] p = Program.task1212(line);
+                int m = p[2] * p[3];
+
+                while (!streamReader.EndOfStream)
                 {
-                    String line;
-                    line = streamReader.ReadLine();
-                    char[] ch = line.ToCharArray();
-                    int s = ch[2] * ch[3];
-                     if (s > m)
+
+
+
+                    while (!streamReader.EndOfStream)
+                    {
+                        line = streamReader.ReadLine();
+                        p = Program.task1212(line);
+                        int s = p[2] * p[3];
+
+                        if (s > m)
                         {
                             m = s;
                         }
+                    }
 
-                    
 
                 }
                 Console.WriteLine(m);
@@ -39,10 +48,34 @@ namespace task1212
             {
                 Console.WriteLine("Не удается считать число");
             }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("Файл не существует");
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine("Некорректный формат данных");
+            }
+
 
 
 
 
         }
+        public static int[] task1212(String line)
+        {
+
+            String[] arr = line.Split(';');
+            int[] num = new int[arr.Length];
+
+            int a = 0;
+            while (a < arr.Length)
+            {
+                num[a] = int.Parse(arr[a]);
+                a++;
+            }
+            return num;
+        }
+
     }
 }

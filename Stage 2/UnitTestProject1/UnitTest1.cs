@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Kode_project;
+using task1212;
 
 namespace UnitTestProject1
 {
@@ -231,6 +232,24 @@ namespace UnitTestProject1
         public void Task5170assertion1()
         {
             Metods.task5170(-10);
+        }
+        [TestMethod]
+        public void Task1212test()
+        {
+            int[] p;
+            p=Program.task1212("0;0;10;15");
+            
+            int[] expected1 = new int[] {0,0,10,15 };
+            CollectionAssert.AreEqual(expected1, p);
+           
+        }
+        [TestMethod]
+        public void Task6497test()
+        {
+            int[] p = new int[]{ 9, 8, 9, 1, 1 ,5, 1, 1};
+            double[] a = Metods.task6497(p);
+            double[] t = new double[] { 4.6250, 3.6250, 4.6250, 3.3750, 3.3750, 0.6250, 3.3750, 3.3750 };
+            CollectionAssert.AreEqual(t, a);
         }
     }
 }
