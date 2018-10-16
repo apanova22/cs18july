@@ -39,7 +39,7 @@ namespace task6862
                 }
                
             }
- Console.WriteLine(m);
+                Console.WriteLine(m);
             }
             catch (FormatException e)
             {

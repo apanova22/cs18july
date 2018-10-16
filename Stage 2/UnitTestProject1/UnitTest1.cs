@@ -165,5 +165,72 @@ namespace UnitTestProject1
         {
             Metods.task9020(75);
         }
+        [TestMethod]
+        public void Task3943test()
+        {
+            double r1 = Metods.task3943(-5,81);
+            double r2 = Metods.task3943(7507, 7499);
+           
+            Assert.AreEqual(-10.0000, r1, 0.0001);
+            Assert.AreEqual(-435.7062, r2, 0.0001);
+
+        }
+        [TestMethod]
+        public void Task7799test()
+        {
+            double p = Metods.task7799(5, 45);
+            double l = Metods.task7799(7297, 30);
+
+            Assert.AreEqual(34.671920, p, 0.0001);
+            Assert.AreEqual(61972.336135, l, 0.0001);
+
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task7799assertion1()
+        {
+            Metods.task7799(0,30);
+        }
+        [TestMethod]
+        public void Task9354test()
+        {
+            double p = Metods.task9354(7,1,3);
+            double p1 = Metods.task9354(7247, 7243,7229);
+            double p2 = Metods.task9354(-11,-13,-17);
+            Assert.AreEqual(-83.0000, p, 0.0001);
+            Assert.AreEqual(-157093203.0000, p1, 0.0001);
+            Assert.AreEqual(-579.0000, p2, 0.0001);
+
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9354assertion1()
+        {
+            Metods.task9354(0,1,3);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9354assertion2()
+        {
+            Metods.task9354(0,1000,2000);
+        }
+        [TestMethod]
+        public void Task5170test()
+        {
+            string p = Metods.task5170(6);
+            string p1 = Metods.task5170(3219);
+            string p2 = Metods.task5170(7);
+            string p3 = Metods.task5170(2017);
+            Assert.AreEqual("число не простое", p);
+            Assert.AreEqual("число не простое", p1);
+            Assert.AreEqual("число простое", p2);
+            Assert.AreEqual("число простое", p3);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task5170assertion1()
+        {
+            Metods.task5170(-10);
+        }
     }
 }

@@ -150,6 +150,94 @@ namespace Kode_project
             double result = 3 * Math.Sqrt(61 - x);
             return result;
         }
+        public static double task3943(int x, int y)
+        {
+          
+            
+            if (y < 0)
+            {
+                ArgumentException e = new ArgumentException("Значение y должно быть неотрицательным");
+                throw e;
+                
+            }
+            if ((x + Math.Sqrt(y)) < 0)
+            {
+                ArgumentException r = new ArgumentException("Подкоренное выражение должно быть неотрицательным");
+                throw r;
+            }
+            double result;
+            result = -5 * Math.Sqrt(x + Math.Sqrt(y));
+            
+            
+            return result;
+        }
+        public static double task7799(int mass, int aDeg)
+        {
+            double g = 9.8067;
+             if (mass <= 0)
+            {
+                ArgumentException e = new ArgumentException("Масса должна быть положительной");
+                throw e;
 
+            }
+            if (aDeg > 90)
+            {
+                ArgumentException r = new ArgumentException("0");
+                throw r;
+
+            }
+
+            double aRad = aDeg * Math.PI / 180;
+            double force;
+            force = mass * g * Math.Cos(aRad);
+            return force;
+        }
+        public static double task9354(int a, int b, int c)
+        
+        {
+            if (a == 0)
+            {
+                ArgumentException e = new ArgumentException("Уравнение y="+a+"x^2+"+b+"x+"+c+" не является квадратным");
+                throw e;
+            }
+            double discriminant;
+            discriminant = b * b - 4 * a * c;
+            return discriminant;
+        }
+        public static string task5170 (int y)
+
+        {   int a = 1;
+            int count = 0;
+            if (y < 0)
+            {
+                ArgumentException e = new ArgumentException("Значение Y должно быть положительным");
+                throw e;
+               
+            }
+            while (a <= y)
+            {
+                if (y % a == 0)
+                {
+                    count = count + 1;
+                    a = a + 1;
+                }
+                else
+                {
+
+                    a = a + 1;
+                }
+
+            }
+            if (count == 2)
+            {
+                
+                return "число простое";
+            }
+            else
+            {
+                
+                return "число не простое";
+            }
+        }
     }
 }
