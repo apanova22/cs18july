@@ -7,41 +7,64 @@ using System.Threading.Tasks;
 
 namespace task5081
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             String n = Console.ReadLine();
             String filename = "task5081/test" + n + ".txt";
 
-            StreamReader streamReader = new StreamReader(filename);
-            String s = streamReader.ReadLine();
+
+
 
             try
             {
-                int sum = int.Parse(s);
-                if (!streamReader.EndOfStream)
-                { String line;
-                    int l;
-                    int i = 0;
-                    while (!streamReader.EndOfStream)
+                StreamReader streamReader = new StreamReader(filename);
+                String line;
+                line = streamReader.ReadLine();
+                int[] p = Program.task5081(line);
+                int i = 0;
+                while (!streamReader.EndOfStream)
                     {
                         line = streamReader.ReadLine();
-                        l = int.Parse(line);
-                        char[] ch = line.ToCharArray();
-                        while (i < ch.Length)
+                        p = Program.task5081(line);
+                        int s=0;
+                        while(i< p.Length)
                         {
-                            sum = sum + ch[i];
+                            s =s+p[i];
+                            i++;
                         }
+                       
 
                     }
-
-                }
-                Console.WriteLine(sum);
+                  Console.WriteLine(s);
             }
             catch (FormatException e)
             {
                 Console.WriteLine("Не удается считать число");
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine("Строка пуста");
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("Файл отсутствует");
+            }
+
+            public static int[] task5081(String line)
+            {
+
+                String[] arr = line.Split(';');
+                int[] num = new int[arr.Length];
+
+                int a = 0;
+                while (a < arr.Length)
+                {
+                    num[a] = int.Parse(arr[a]);
+                    a++;
+                }
+                return num;
             }
         }
     }
