@@ -18,49 +18,71 @@ namespace task9472
             try
             {
                 StreamReader streamReader = new StreamReader(filename);
+                if (streamReader.EndOfStream)
+                {
+                    Console.WriteLine("Файл пуст");
+                    return;
+                }
                 String line;
                 line = streamReader.ReadLine();
                 
-                int [] c = Program.circle(line);
-                int[] r = Program.rect(line);
-                int m = r[3] * r[4];
-                double k = Math.PI * c[3]*c[3];
+  Figura c = Program.circle(line);
+ Figura r = Program.rect(line);
+                double k;
+
+                if (c.type == "circle")
+                {
+
+                    k = Math.PI * c.p[2] * c.p[2];
+                }
+                else if (r.type == "rect")
+                {
+
+                    k = r.p[2] * r.p[3];
+                }
+                else
+                {
+                    Console.WriteLine("Некорректный формат данных");
+                    return;
+                }
+                
                 while (!streamReader.EndOfStream)
                 {
                      while (!streamReader.EndOfStream)
                     {
                         line = streamReader.ReadLine();
-                        if (c[0] == "circle")
+c = Program.circle(line);
+                        if (c.type == "circle")
                         {
-                            c = Program.circle(line);
-                            double o = Math.PI * c[3] * c[3];
+                            
+                            double o = Math.PI * c.p[2] * c.p[2];
 
                             if (o > k)
                             {
                                 k = o;
                             }
                         }
-                        else
+                        else if (r.type == "rect")
                         {
                             r = Program.rect(line);
-                            int s= r[3] * r[4];
-                            if (s > m)
+                            int s= r.p[2] * r.p[3];
+                            if (s > k)
                             {
-                                m = s;
+                                k = s;
                             }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Некорректный формат данных");
+                            return;
                         }
                     }
 
 
                 }
-                if (c[0] == "circle")
-                {
+                
                     Console.WriteLine(k);
-                }
-                else
-                {
-                    Console.WriteLine(m);
-                }
+                
 
 
             }
@@ -82,34 +104,42 @@ namespace task9472
 
 
         }
-        public static int[] rect(String line)
+        public static Figura rect(String line)
         {
 
             String[] arr = line.Split(';');
-            int[] num = new int[arr.Length];
+            int[] num = new int[arr.Length-1];
 
-            int a = 0;
-            while (a < arr.Length)
+            int a = 1;
+            while (a <= num.Length)
             {
-                num[a] = int.Parse(arr[a]);
+                num[a-1] = int.Parse(arr[a]);
                 a++;
             }
-            return num;
+            Figura r=new Figura();
+            r.type = arr[0];
+            
+            r.p= num;
+            return r;
         }
-        public static int[] circle(String line)
+        public static Figura circle(String line)
         {
 
             String[] arr = line.Split(';');
-            int[] nam = new int[arr.Length];
+            int[] nam = new int[arr.Length-1];
 
-            int a = 0;
-            while (a < arr.Length)
+            int a = 1;
+            while (a <= nam.Length)
             {
-                nam[a] = int.Parse(arr[a]);
+                nam[a-1] = int.Parse(arr[a]);
                 a++;
             }
-            return nam;
+            Figura c = new Figura();
+            c.type = arr[0];
+            c.p = nam;
+            return c;
         }
     }
+
     }
 
