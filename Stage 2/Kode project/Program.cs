@@ -131,6 +131,7 @@ namespace Kode_project
             {
                 Console.WriteLine(ex.Message);
              } 
+
           double p = Metods.task9354(7, 1,3);
           Console.WriteLine("{0:F6}", p);
             double p1 = Metods.task9354(7247, 7243, 7229);
@@ -158,8 +159,8 @@ namespace Kode_project
             {
                 Console.WriteLine(ex.Message);
 
-            } */
-            string p1 = Metods.task5170(6);
+            } 
+           string p1 = Metods.task5170(6);
             Console.WriteLine(p1);
             string p2 = Metods.task5170(3219);
             Console.WriteLine(p2);
@@ -177,8 +178,42 @@ namespace Kode_project
             {
                 Console.WriteLine(ex.Message);
 
-            }
+            } */
 
+           bool r1= Range.HasIntersection(2,3,5,7);
+            Console.WriteLine(r1);
+            bool r2= Range.HasIntersection(11, 17, 13, 19);
+            Console.WriteLine(r2);
+            bool r3=Range.HasIntersection(23, 37, 29, 31);
+            Console.WriteLine(r3);
+            bool r4= Range.HasIntersection(43, 53, 41, 47);
+            Console.WriteLine(r4);
+            bool r5= Range.HasIntersection(5, 15, 0, 30);
+            Console.WriteLine(r5);
+            bool r6=Range.HasIntersection(67, 71, 59, 61);
+            Console.WriteLine(r6);
+           try
+            {
+                
+Range.HasIntersection(79, 73, 83, 89);
+
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+            try
+            {
+                
+
+ Range.HasIntersection(97, 101, 107, 103);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
         }
 
     }

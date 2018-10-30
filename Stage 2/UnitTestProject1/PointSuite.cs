@@ -36,6 +36,33 @@ namespace UnitTestProject1
             b.x = 3;
             b.y = 4;
             double r = Point.distanceBetween(a, b);
+           
+            Assert.AreEqual(3.6056, r, 0.0001);
+
+        }
+        [TestMethod]
+        public void distanceToIntsTest()
+
+
+        {
+            Point src = new Point();
+            src.x = 1;
+            src.y = 1;
+            double r = src.distanceTo(3, 4);
+            Assert.AreEqual(3.6056, r, 0.0001);
+        }
+        [TestMethod]
+        public void distanceToPointTest()
+
+        {
+            Point a = new Point();
+            Point b = new Point();
+            a.x = 1;
+            a.y = 1;
+            b.x = 3;
+            b.y = 4;
+            double r = b.distanceTo(a);
+
             Assert.AreEqual(3.6056, r, 0.0001);
 
         }

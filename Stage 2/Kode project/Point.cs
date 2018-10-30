@@ -25,5 +25,21 @@ namespace Kode_project
 
             return AB;
         }
+
+        public double distanceTo(int Xb, int Yb)
+        {
+            double AB;
+           
+            AB = Math.Sqrt(((Xb - this.x) * (Xb - this.x)) + ((Yb - this.y) * (Yb - this.y)));
+
+            return AB;
+        }
+        public double distanceTo(Point a)
+        {
+            double AB;
+            AB = Math.Sqrt(((this.x - a.x) * (this.x - a.x)) + ((this.y - a.y) * (this.y - a.y)));
+
+            return AB;
+        }
     }
 }

@@ -5,67 +5,78 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task5081
+namespace task9472
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
             String n = Console.ReadLine();
             String filename = "task5081/test" + n + ".txt";
-
-
-
-
-            try
-            {
+            try {
                 StreamReader streamReader = new StreamReader(filename);
-                String line;
-                line = streamReader.ReadLine();
-                int[] p = Program.task5081(line);
-                int i = 0;
                 while (!streamReader.EndOfStream)
+                {
+                    try
                     {
-                        line = streamReader.ReadLine();
-                        p = Program.task5081(line);
-                        int s=0;
-                        while(i< p.Length)
+
+                        String[] arr;
+                        int[] num;
+                        String line;
+                        int a;
+                        int sum = 0;
+                        while (!streamReader.EndOfStream)
                         {
-                            s =s+p[i];
-                            i++;
+                            line = streamReader.ReadLine();
+
+                            arr = line.Split(',');
+                            num = new int[arr.Length];
+
+                            a = 0;
+                            while (a < num.Length)
+                            {
+                                num[a] = int.Parse(arr[a]);
+                                a++;
+                            }
+                            a = 0;
+                            sum = 0;
+                            while (a < num.Length)
+                            {
+                                sum = sum + num[a];
+                                a++;
+                            }
+
+                            Console.WriteLine(sum);
                         }
-                       
+
+
 
                     }
-                  Console.WriteLine(s);
-            }
-            catch (FormatException e)
+                   
+                    catch (IndexOutOfRangeException e)
+                    {
+                        Console.WriteLine("Некорректный формат данных");
+                    }
+ catch (FormatException e)
             {
                 Console.WriteLine("Не удается считать число");
             }
-            catch (ArgumentNullException e)
-            {
-                Console.WriteLine("Строка пуста");
-            }
-            catch (FileNotFoundException e)
-            {
-                Console.WriteLine("Файл отсутствует");
-            }
-
-            public static int[] task5081(String line)
-            {
-
-                String[] arr = line.Split(';');
-                int[] num = new int[arr.Length];
-
-                int a = 0;
-                while (a < arr.Length)
-                {
-                    num[a] = int.Parse(arr[a]);
-                    a++;
                 }
-                return num;
             }
+ catch (FileNotFoundException e)
+                    {
+                        Console.WriteLine("Файл не существует");
+                    }
+           
+            
+            }
+
+
+
+
+
         }
+       
+        
     }
-}
+
