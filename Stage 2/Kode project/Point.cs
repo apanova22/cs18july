@@ -8,8 +8,19 @@ namespace Kode_project
 {
      public class Point
     {
-       public int x;
-        public int y;
+       private int x;
+        private int y;
+
+        public void setCoordinates(int px, int py)
+        {
+            this.x = px;
+            this.y = py;
+        }
+        private String color;
+        public void setColor(String a)
+        {
+            this.color = a;
+        }
 
         public static double distanceBetween(double Xa, double Ya, double Xb, double Yb)
         {
@@ -40,6 +51,30 @@ namespace Kode_project
             AB = Math.Sqrt(((this.x - a.x) * (this.x - a.x)) + ((this.y - a.y) * (this.y - a.y)));
 
             return AB;
+        }
+
+        public override bool Equals(Object other)
+
+        {    if (other == null)
+            {
+                return false;
+            }
+            if (GetType() != other.GetType())
+            {
+                return false;
+            }
+            Point point = (Point)other;
+           
+           
+            if (x == point.x && y == point.y && color==point.color)
+            {
+                return true;
+            }
+            if (this == other)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

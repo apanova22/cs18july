@@ -16,13 +16,12 @@ namespace UnitTestProject1
 
             //добавить директиву Using в файле где будет использоваться класс х
             //добавить модификатор доступа "public" у класса х
-            double r = Metods.task4411(11.13);
-            double a = Metods.task4411(-7919);
-            double b = Metods.task4411(0);
+           
+           
 
-            Assert.AreEqual(18.13, r, 0.001);
-            Assert.AreEqual(-7912, a, 0.001);
-            Assert.AreEqual(7, b, 0.001);
+            Assert.AreEqual(18.13, Metods.task4411(11.13), 0.001);
+            Assert.AreEqual(-7912, Metods.task4411(-7919), 0.001);
+            Assert.AreEqual(7, Metods.task4411(0), 0.001);
         }
         [TestMethod]
         public void Task2790test()
@@ -42,8 +41,8 @@ namespace UnitTestProject1
         public void Task3946test()
         {
             int[] arr = new int[] { 1, 2, 3, 4, 1 };
-            double r = Metods.task3946(arr);
-            Assert.AreEqual(2.2, r, 0.001);
+           
+            Assert.AreEqual(2.2,  Metods.task3946(arr), 0.001);
         }
         [TestMethod]
         public void Task4283test()
