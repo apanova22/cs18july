@@ -11,6 +11,12 @@ namespace Kode_project
         public int from;
         public int to;
 
+        public void Init(int A, int B)
+        {
+            this.from = A;
+            this.to = B;
+        }
+
         public static bool HasIntersection(int leftA, int leftB, int rightA, int rightB)
         {
 
@@ -212,6 +218,30 @@ namespace Kode_project
                 ArgumentException e = new ArgumentException("Значение А должно быть меньше В");
                 throw e;
             }
+        }
+        public override bool Equals(Object other)
+
+        {
+            if (other == null)
+            {
+                return false;
+            }
+            if (GetType() != other.GetType())
+            {
+                return false;
+            }
+            Range range = (Range)other;
+
+
+            if (from == range.from && to == range.to )
+            {
+                return true;
+            }
+            if (this == other)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -48,12 +48,11 @@ namespace UnitTestProject1
             {
                 Range left = new Range();
                 Range right = new Range();
-                left.from = 2;
-                left.to = 3;
-                right.from = 5;
-                right.to = 7;
-                bool r = Range.HasIntersection(left, right);
-                Assert.IsFalse(r);
+                left.Init(2, 3);
+
+                right.Init(5, 7);
+             
+                Assert.IsFalse(Range.HasIntersection(left, right));
             }
 
             [TestMethod]
@@ -61,24 +60,20 @@ namespace UnitTestProject1
             {
                 Range left = new Range();
                 Range right = new Range();
-                left.from = 2;
-                left.to = 3;
-                right.from = 5;
-                right.to = 7;
-                bool r = left.Intersects(5,7);
-                Assert.IsFalse(r);
+                left.Init(2, 3);
+                right.Init(5, 7);
+              
+                Assert.IsFalse( left.Intersects(5,7));
             }
             [TestMethod]
             public void HasIntersection5()
             {
                 Range left = new Range();
                 Range right = new Range();
-                left.from = 2;
-                left.to = 3;
-                right.from = 5;
-                right.to = 7;
-                bool r = left.Intersects(right);
-                Assert.IsFalse(r);
+                left.Init(2, 3);
+                right.Init(5, 7);
+                
+                Assert.IsFalse(left.Intersects(right));
             }
         }
         }
