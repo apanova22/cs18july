@@ -11,6 +11,16 @@ namespace Kode_project
        private int x;
         private int y;
 
+        public Point()
+        {
+            Console.WriteLine("Constructor called");
+        }
+        public Point(int x, int y)
+        {
+            Console.WriteLine("Counstructor 2 called");
+                this.x=x;
+            this.y = y;
+        }
         public void setCoordinates(int px, int py)
         {
             this.x = px;
@@ -75,6 +85,12 @@ namespace Kode_project
                 return true;
             }
             return false;
+        }
+        public override string ToString()
+        {
+           String result= "("+x+";"+y+")";
+            return result;
+
         }
     }
 }

@@ -178,7 +178,7 @@ namespace Kode_project
             {
                 Console.WriteLine(ex.Message);
 
-            } */
+            } 
 
            bool r1= Range.HasIntersection(2,3,5,7);
             Console.WriteLine(r1);
@@ -213,9 +213,20 @@ Range.HasIntersection(79, 73, 83, 89);
             {
                 Console.WriteLine(ex.Message);
 
-            }
+            }*/
+
+           Point a= new Point(31,37);
+           Console.WriteLine(a);
+           Point p1= new Point(11,13);
+           Point p2= new Point(17,19);
+           double u=Point.distanceBetween(p1, p2);
+            Console.WriteLine("Расстояние между {0} и {1} составляет {2:F4}\n",p1,p2,u);
+
         }
-
+  
     }
+   
+      
 
+    
 }

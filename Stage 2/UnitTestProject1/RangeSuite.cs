@@ -46,34 +46,47 @@ namespace UnitTestProject1
             [TestMethod]
             public void HasIntersection3()
             {
-                Range left = new Range();
-                Range right = new Range();
-                left.Init(2, 3);
-
-                right.Init(5, 7);
+                Range left = new Range(2,3);
+                Range right = new Range(5,7);
+                
              
                 Assert.IsFalse(Range.HasIntersection(left, right));
             }
 
             [TestMethod]
+            [ExpectedException(typeof(ArgumentException))]
+            public void IntersectsIntWrongLeftTest()
+            {
+                Range left = new Range(4, 3);
+                left.Intersects(2,3);
+            }
+            [TestMethod]
             public void HasIntersection4()
             {
-                Range left = new Range();
-                Range right = new Range();
-                left.Init(2, 3);
-                right.Init(5, 7);
+                Range left = new Range(2,3);
+                Range right = new Range(5,7);
+                
               
                 Assert.IsFalse( left.Intersects(5,7));
             }
             [TestMethod]
             public void HasIntersection5()
             {
-                Range left = new Range();
-                Range right = new Range();
-                left.Init(2, 3);
-                right.Init(5, 7);
+                Range left = new Range(2,3);
+                Range right = new Range(5,7);
+                
                 
                 Assert.IsFalse(left.Intersects(right));
+            }
+            [TestMethod]
+            public void In()
+            {
+                Range one = new Range(3, 5);
+                one.Shift(7);
+                Range one1 = new Range(10, 12);
+                bool r=one.Equals(one1);
+                Assert.AreEqual(true,r);
+
             }
         }
         }

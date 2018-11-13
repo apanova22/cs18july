@@ -54,10 +54,9 @@ namespace UnitTestProject1
         public void distanceToPointTest()
 
         {
-            Point a = new Point();
-            Point b = new Point();
-            a.setCoordinates(1, 1);
-            b.setCoordinates(3, 4);
+            Point a = new Point(1,1);
+            Point b = new Point(3,4);
+            
             double r = b.distanceTo(a);
 
             Assert.AreEqual(3.6056, r, 0.0001);

@@ -16,7 +16,31 @@ namespace Kode_project
             this.from = A;
             this.to = B;
         }
+        public void Shift(int C)
+        {
+            this.from=this.from + C;
+            this.to=this.to + C;
+        }
+        public void Squeeze(int D)
+        {
+            this.to = this.to - D;
+        }
+        public Range(int A, int B)
+        {
+            this.from = A;
+            this.to = B;
+            if (A < B && this.from < this.to)
+            {
+                
+                
+            }
+            else
+            {
+                ArgumentException e = new ArgumentException("Значение А должно быть меньше В");
+                throw e;
+            }
 
+        }
         public static bool HasIntersection(int leftA, int leftB, int rightA, int rightB)
         {
 
@@ -243,5 +267,6 @@ namespace Kode_project
             }
             return false;
         }
+
     }
 }
