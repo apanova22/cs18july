@@ -274,6 +274,9 @@ namespace Kode_project
             }
             return false;
         }
-
+        public override string ToString()
+        {
+            return "["+this.from+";"+this.to+"]";
+        }
     }
 }

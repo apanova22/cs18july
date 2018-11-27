@@ -213,7 +213,7 @@ Range.HasIntersection(79, 73, 83, 89);
             {
                 Console.WriteLine(ex.Message);
 
-            }*/
+            }
 
            Point a= new Point(31,37);
            Console.WriteLine(a);
@@ -221,7 +221,13 @@ Range.HasIntersection(79, 73, 83, 89);
            Point p2= new Point(17,19);
            double u=Point.distanceBetween(p1, p2);
             Console.WriteLine("Расстояние между {0} и {1} составляет {2:F4}\n",p1,p2,u);
-
+*/
+            Range a = new Range(10,60);
+            Console.WriteLine("Исходный интервал"+a);
+            a.Shift(70);
+            Console.WriteLine("После сдвига {0}\n",a);
+            a.Squeeze(40);
+            Console.WriteLine("После сжатия {0}",a);
         }
   
     }

@@ -124,10 +124,11 @@ namespace UnitTestProject1
                 Range one = new Range(19, 29);
                 one.Squeeze(-5);
                 Range one1 = new Range(19, 34);
-                bool r = one.Equals(one1);
-                Assert.AreEqual(true, r);
+               
+                Assert.IsTrue(one.Equals(one1));
 
             }
+            
         }
         }
     }
