@@ -88,6 +88,46 @@ namespace UnitTestProject1
                 Assert.AreEqual(true,r);
 
             }
+            [TestMethod]
+            public void In1()
+            {
+                Range one = new Range(31, 43);
+                one.Shift(-6);
+                Range one1 = new Range(25, 37);
+                bool r = one.Equals(one1);
+                Assert.AreEqual(true, r);
+
+            }
+            [TestMethod]
+            public void In2()
+            {
+                Range one = new Range(10, 50);
+                one.Squeeze(30);
+                Range one1 = new Range(10, 20);
+                bool r = one.Equals(one1);
+                Assert.AreEqual(true, r);
+
+            }
+            
+            [TestMethod]
+            [ExpectedException(typeof(ArgumentException))]
+            public void In3()
+        { Range one = new Range(23, 51);
+                 one.Squeeze(100);
+                
+                
+
+            }
+            [TestMethod]
+            public void In4()
+            {
+                Range one = new Range(19, 29);
+                one.Squeeze(-5);
+                Range one1 = new Range(19, 34);
+                bool r = one.Equals(one1);
+                Assert.AreEqual(true, r);
+
+            }
         }
         }
     }

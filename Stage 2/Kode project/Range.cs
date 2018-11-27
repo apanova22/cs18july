@@ -23,6 +23,13 @@ namespace Kode_project
         }
         public void Squeeze(int D)
         {
+            
+           if(D>this.to)
+            {
+                ArgumentException e = new ArgumentException();
+                throw e;
+            }
+           
             this.to = this.to - D;
         }
         public Range(int A, int B)
