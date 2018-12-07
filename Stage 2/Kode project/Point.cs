@@ -10,7 +10,13 @@ namespace Kode_project
     {
        private int x;
         private int y;
-
+         private String color;
+         public override int GetHashCode()
+        {
+           
+             int a = x + 31 * y;
+             return a;
+     }
         public Point()
         {
             Console.WriteLine("Constructor called");
@@ -26,7 +32,7 @@ namespace Kode_project
             this.x = px;
             this.y = py;
         }
-        private String color;
+        
         public void setColor(String a)
         {
             this.color = a;
