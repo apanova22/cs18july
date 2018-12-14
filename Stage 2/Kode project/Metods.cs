@@ -267,7 +267,7 @@ namespace Kode_project
             }
             return r;
         }
-        public static List<int> task8418(int x)
+       /* public static List<int> task8418(int x)
         {
 
             int a = 1;
@@ -291,9 +291,9 @@ namespace Kode_project
 
                     a = a + 1;
                 }
-                return a;
             }
+                
+            //создать коллекцию типа List<int> 
+            // наполнить её данными*/
         }
     }
-}
-

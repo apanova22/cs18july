@@ -29,6 +29,7 @@ namespace UnitTestProject1
         public void distanceBetweeenObjects()
 
         {
+           
             Point a = new Point();
             Point b = new Point();
             a.setCoordinates(1, 1);

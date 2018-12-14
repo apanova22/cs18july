@@ -8,10 +8,11 @@ namespace Kode_project
 {
      public class Point
     {
-       private int x;
-        private int y;
-         private String color;
-         public override int GetHashCode()
+     int x;
+         int y;
+          String color;
+
+        public override int GetHashCode()
         {
            
              int a = x + 31 * y;
@@ -23,7 +24,7 @@ namespace Kode_project
         }
         public Point(int x, int y)
         {
-            Console.WriteLine("Counstructor 2 called");
+           
                 this.x=x;
             this.y = y;
         }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kode project", "Kode project\Kode project.csproj", "{CB1E8336-9469-4BC5-8C61-14D9269548ED}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.6", "15.6\15.6.csproj", "{A0018A78-BB74-4BCC-8005-5E2C50AFA4D8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.5", "15.5\15.5.csproj", "{67BC8AE3-A2C6-4916-912D-CBB4FDD78510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.7", "15.7\15.7.csproj", "{D3F52A06-6D3F-4B2F-AE93-8E967A690114}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{67BC8AE3-A2C6-4916-912D-CBB4FDD78510}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67BC8AE3-A2C6-4916-912D-CBB4FDD78510}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67BC8AE3-A2C6-4916-912D-CBB4FDD78510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F52A06-6D3F-4B2F-AE93-8E967A690114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F52A06-6D3F-4B2F-AE93-8E967A690114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F52A06-6D3F-4B2F-AE93-8E967A690114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F52A06-6D3F-4B2F-AE93-8E967A690114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
