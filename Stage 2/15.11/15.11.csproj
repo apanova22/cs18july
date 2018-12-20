@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CB1E8336-9469-4BC5-8C61-14D9269548ED}</ProjectGuid>
+    <ProjectGuid>{A264966F-A84B-40C8-8547-983AC9E1DC0B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Kode_project</RootNamespace>
-    <AssemblyName>Kode project</AssemblyName>
+    <RootNamespace>_15._11</RootNamespace>
+    <AssemblyName>15.11</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,16 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comparator1457.cs" />
-    <Compile Include="Comparator8258.cs" />
-    <Compile Include="Metods.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Range.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kode project\Kode project.csproj">
+      <Project>{cb1e8336-9469-4bc5-8c61-14d9269548ed}</Project>
+      <Name>Kode project</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

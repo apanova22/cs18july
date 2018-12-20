@@ -18,20 +18,26 @@ namespace _15._7
             {
                 StreamReader streamReader = new StreamReader(filename);
                 HashSet<Point> set = new HashSet<Point>();
-                
+
                 while (!streamReader.EndOfStream)
                 {
                     String a = streamReader.ReadLine();
 
                     String[] arr = a.Split(';');
-                   
+                    if (arr.Length != 3)
+                    {
+                        Console.WriteLine("Некорректный формат");
+                        return;
+                    }
+
+
                     int x = int.Parse(arr[0]);
                     int y = int.Parse(arr[1]);
-                    Point p1 = new Point(x,y);
+                    Point p1 = new Point(x, y);
                     p1.setColor(arr[2]);
                     set.Add(p1);
-                            
-                  
+
+
 
 
                 }
@@ -40,7 +46,7 @@ namespace _15._7
                 {
                     Console.WriteLine(p1.ToString());
                 }
-                Console.WriteLine(@"{ ""x"":{0}, ""y"":{1}, ""color"":{2}}");
+
 
             }
 
@@ -51,6 +57,10 @@ namespace _15._7
             catch (DirectoryNotFoundException e)
             {
                 Console.WriteLine(e.Message);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Не удается считать число");
             }
         }
     }

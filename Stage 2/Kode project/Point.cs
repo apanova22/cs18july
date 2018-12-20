@@ -83,7 +83,7 @@ namespace Kode_project
             Point point = (Point)other;
            
            
-            if (x == point.x && y == point.y && color==point.color)
+            if (x == point.x && y == point.y)
             {
                 return true;
             }
@@ -95,7 +95,8 @@ namespace Kode_project
         }
         public override string ToString()
         {
-           String result= "("+x+";"+y+")";
+            String result = "(" + x + ";" + y +";"+ color+")";
+         
             return result;
 
         }
